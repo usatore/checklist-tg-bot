@@ -1,11 +1,11 @@
 import asyncio
 import os
 from aiogram import Bot, Dispatcher
-from config import BOT_TOKEN
-from handlers import router
+from src.config import BOT_TOKEN
+from src.handlers import router
 from aiogram.fsm.storage.redis import RedisStorage
 from redis.asyncio import Redis
-from scheduler import start_scheduler
+from src.scheduler import start_scheduler
 
 async def main():
     #redis_host = os.getenv('REDIS_HOST', 'localhost')
