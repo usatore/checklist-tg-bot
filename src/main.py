@@ -10,10 +10,7 @@ from src.scheduler import start_scheduler
 
 async def main():
     # Получаем URL подключения к Redis из переменной окружения
-    redis_url = os.getenv('REDIS_URL')  # Например, redis://:<password>@<hostname>:<port>
-
-    if not redis_url:
-        raise ValueError("REDIS_URL environment variable is not set")
+    redis_url = 'redis://default:RIUYmdTjDwlIbpDYmqbfwURuknRTmYzR@redis.railway.internal:6379'
 
     # Подключаемся к Redis используя url
     redis_client = Redis.from_url(redis_url)
