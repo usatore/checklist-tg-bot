@@ -1,11 +1,11 @@
 from aiogram import Router, F
 from aiogram.filters import Command, CommandStart
-from lexicon import LEXICON, ALL_QUESTS
-from storage import global_quests, users_db, users_nicknames
+from src.lexicon import LEXICON, ALL_QUESTS
+from src.storage import global_quests, users_db, users_nicknames
 from copy import deepcopy
 from aiogram.types import Message, CallbackQuery
-from keyboards import create_quests_keyboard
-from config import ADMIN_ID
+from src.keyboards import create_quests_keyboard
+from src.config import ADMIN_ID
 import os
 KEK = os.getenv('KEK')
 

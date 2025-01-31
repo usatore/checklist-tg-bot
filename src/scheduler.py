@@ -1,5 +1,5 @@
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
-from keyboards import create_quests_keyboard
+from src.keyboards import create_quests_keyboard
 
 
 scheduler = AsyncIOScheduler()
