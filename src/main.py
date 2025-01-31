@@ -8,11 +8,11 @@ from redis.asyncio import Redis
 from scheduler import start_scheduler
 
 async def main():
-    redis_host = os.getenv('REDIS_HOST', 'localhost')
-    redis_port = int(os.getenv('REDIS_PORT', 6379))
+    #redis_host = os.getenv('REDIS_HOST', 'localhost')
+    #redis_port = int(os.getenv('REDIS_PORT', 6379))
     redis_password = os.getenv('REDIS_PASSWORD', None)
 
-    redis = Redis(host=redis_host, port=redis_port, password=redis_password)
+    redis = Redis(host='redis', port=6379, password=redis_password)
 
     #redis = Redis(host='localhost')
     storage = RedisStorage(redis=redis)
