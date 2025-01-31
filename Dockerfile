@@ -15,7 +15,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Копируем весь код проекта в контейнер в директорию /app/src
-COPY src /app/src
+COPY ./src /app/src
 
 # Указываем команду, которая будет выполняться при запуске контейнера
 CMD ["python", "-m", "src.main"]
